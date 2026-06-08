@@ -1,0 +1,104 @@
+:root{
+  /* Dark theme as default */
+  --bg:#0b0f14;
+  --card:#07101a;
+  --text:#e6eef8;
+  --muted:#9fb0c9;
+  --accent:#3aa0ff;
+  --focus:#ffbf47;
+  --max-width:1100px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.6);
+  --radius:10px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body{
+  margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);color:var(--text);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.header-actions{display:flex;align-items:center;gap:.5rem}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:0;top:0;width:auto;height:auto;padding:.5rem;background:#000;color:#fff;z-index:9999}
+.site-header{background:var(--card);border-bottom:1px solid rgba(255,255,255,0.04);}
+.site-title{margin:0;padding:.75rem 0;font-size:1.6rem}
+.tagline{margin:0;color:var(--muted);font-size:1rem}
+.nav-list{list-style:none;padding:0;margin:.5rem 0;display:flex;gap:1rem}
+.nav-list a{color:var(--accent);text-decoration:none}
+.hero{padding:2rem 0}
+.hero h2{font-size:1.6rem;margin:.25rem 0}
+.meta{color:var(--muted);margin-top:.25rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.5rem 0.85rem;border-radius:6px;text-decoration:none}
+.btn:focus{outline:3px solid var(--focus);outline-offset:3px}
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.section{padding:1.25rem 0;border-top:1px solid #eef4fb}
+.projects-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+.tech{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+.skills-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.skills-list li{background:#fff;padding:.45rem .7rem;border-radius:999px;border:1px solid #eef4fb}
+.lead{font-size:1.1rem;color:var(--muted);margin-top:.25rem}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skill{background:var(--card);padding:1rem;border-radius:8px;box-shadow:var(--shadow)}
+.skill-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;color:var(--muted)}
+.skill-bar{background:rgba(255,255,255,0.03);height:12px;border-radius:999px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),#66b3ff);border-radius:999px;transition:width 900ms cubic-bezier(.2,.9,.2,1)}
+
+/* Buttons */
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid rgba(255,255,255,0.06)}
+.btn:focus,.btn.secondary:focus{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Cards */
+.card{transition:transform 220ms ease,box-shadow 220ms ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,0.45)}
+
+/* Smooth scrolling */
+html{scroll-behavior:smooth}
+
+/* Print-friendly resume page */
+@media print{
+  .no-print{display:none}
+  body{background:#fff;color:#000}
+}
+.education{background:var(--card);padding:1rem;border-radius:8px}
+.site-footer{background:var(--card);border-top:1px solid rgba(255,255,255,0.04);padding:1.25rem 0;margin-top:2.5rem}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;align-items:start}
+.social-list{list-style:none;padding:0;margin:0;display:flex;gap:.5rem}
+.copyright{border-top:1px dashed rgba(255,255,255,0.03);padding-top:.75rem;margin-top:.75rem}
+/* Focus styles for keyboard users */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
+/* Responsive */
+@media (max-width:700px){
+  .nav-list{flex-wrap:wrap}
+  .footer-grid{grid-template-columns:1fr}
+}
+
+.theme-toggle{background:transparent;border:1px solid rgba(11,14,20,0.06);padding:.4rem .6rem;border-radius:6px;cursor:pointer;color:var(--muted);font-weight:600}
+.theme-toggle:focus{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Contact form styles */
+.form-card{background:var(--card);padding:1rem;border-radius:8px}
+.form-row{display:flex;gap:1rem;flex-wrap:wrap}
+.form-field{flex:1;min-width:220px;display:flex;flex-direction:column;margin-bottom:.75rem}
+/* Dark theme */
+/* Light theme override when explicitly set */
+html[data-theme="light"]{
+  --bg:#f7f7fb;
+  --card:#ffffff;
+  --text:#0b1220;
+  --muted:#5b6b78;
+  --accent:#0b6efd;
+  --focus:#ffbf47;
+  --shadow: 0 6px 18px rgba(11,18,32,0.06);
+}
+
+/* Elements that depend on variables will update automatically */
+html, body { transition: background-color 220ms ease, color 220ms ease; }
+label{font-weight:600;margin-bottom:.25rem}
+input[type="text"],input[type="email"],textarea,select{padding:.5rem;border:1px solid #d9e6fb;border-radius:6px;font-size:1rem}
+textarea{min-height:120px;resize:vertical}
+.form-help{font-size:.875rem;color:var(--muted)}
+.error{color:#b91c1c;font-size:.9rem}

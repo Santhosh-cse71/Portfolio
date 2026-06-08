@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Santhosh Kumar S</title>
+  <meta name="description" content="Contact Santhosh Kumar S for frontend development opportunities.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Contact</h1>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">Toggle theme</button>
+        <a href="resume.html" class="btn secondary">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section aria-labelledby="contact-heading" class="section">
+      <h2 id="contact-heading">Get in touch</h2>
+      <p class="form-help">I’m available for frontend projects, internships, and collaborations. Fill the form below or email me directly.</p>
+
+      <div class="form-card" role="region" aria-labelledby="contact-heading">
+        <form data-contact-form action="#" method="post" novalidate aria-describedby="form-desc">
+          <p id="form-desc" class="form-help">All fields are required. I will respond within a few days.</p>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required aria-required="true">
+            </div>
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" inputmode="email" required aria-required="true">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required aria-required="true">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required aria-required="true"></textarea>
+          </div>
+
+          <div class="form-field">
+            <button type="submit" class="btn">Send message</button>
+          </div>
+          <p id="form-status" role="status" aria-live="polite" class="form-help"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Contact</h4>
+        <address>
+          <a href="tel:+916383028706">(+91) 63830-28706</a><br>
+          <a href="mailto:santhoshkumarcse23@gmail.com">santhoshkumarcse23@gmail.com</a>
+        </address>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <ul class="social-list">
+          <li><a href="santhosh-kumar-s-851959342">LinkedIn</a></li>
+          <li><a href="https://github.com/Santhosh-cse71">GitHub</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
